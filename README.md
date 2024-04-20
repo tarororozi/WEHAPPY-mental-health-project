@@ -1,6 +1,6 @@
-# WESAD
-###  A Multimodal Dataset for Wearable Stress and Affect Detection
-##### Group 3: Tongxin Shi, Talia Zhuang, Shijia Ren, Yuqing Liu, Junjie Wu
+# WEHAPPY
+###  A Web App Designed Base On Multimodal Dataset for Wearable Stress and Affect Detection
+##### Tongxin Shi, Talia Zhuang, Shijia Ren, Yuqing Liu, Junjie Wu
 
 ----------
 
