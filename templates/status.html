@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mental Health User Inteface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/info_style.css') }}">
+    <link 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+</head>
+<body>
+   <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="user-main">
+            <div class="user-info">
+                <img src="image.webp"/>
+            </div>
+            <li>
+                <a href = "/info" class="active">
+                    <i class="fa-solid fa-id-card"></i>
+                    <span>Info</span>
+                </a>
+            </li>
+            <li>
+                <a href = "/status">
+                    <i class="fa-solid fa-laptop"></i>
+                    <span>Status</span>
+                </a>
+            </li>
+            <li>
+                <a href = "/records">
+                    <i class="fa-solid fa-hospital"></i>
+                    <span>Records</span>
+                </a>
+            </li>
+            <li>
+                <a href = "/settings">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings </span>
+                </a>
+            </li>
+            <li class="support">
+                <a href = "/support">
+                    <i class="fa-solid fa-headset"></i>
+                    <span>Support </span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href = "/logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div class="user-content">
+        <div class="header-wrapper">
+            <div class="dashboard-title">
+                <span>User Records</span>
+            </div>
+        </div>
+        <div class="table-wrapper">
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                        <th>Username</th>
+                        <th>Feeling</th>
+                        <th>Time</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for row in user_data %}
+                        <tr onclick="highlightRow(this)">
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[4] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

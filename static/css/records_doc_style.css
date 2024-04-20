@@ -1,0 +1,183 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   border: none;
+   outline: none;
+   box-sizing: border-box;
+   font-family: "Platypi", sans-serif;
+}
+body {
+    display: flex;
+}
+.sidebar {
+    position:sticky;
+    top:0;
+    left:0;
+    bottom:0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color:antiquewhite;
+    overflow:hidden;
+    transition:width 0.5s ease;
+    background-color: darkseagreen;
+    align-items:center;
+}
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+.user-info img{
+    width:50px;
+    height:50px;
+    align-items: center;
+    cursor:pointer;
+    border-radius: 50%;
+    transition: transform 0.5s esse-in-out;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    width: 100%;
+    transition:transform 0.5s ease;
+}
+.sidebar:hover .user-info img{
+    transform: scale(1.2);
+    transition: transform 0.5s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+.user-main {
+    height: 88%;
+    position:relative;
+    list-style: none;
+    padding: 0;
+}
+.user-main li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+    background-color:transparent;
+}
+.user-main li:hover,
+.user-main li:active{
+    background:forestgreen;
+}
+.user-main a{
+    color:aliceblue;
+    font-size:16px;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    gap:1.5rem;
+}
+.user-main a span{
+    overflow:hidden;
+}
+.user-main a i{
+    font-size: 1.2rem
+}
+.support{
+    position: absolute;
+    bottom:15%;
+    left: 0;
+    width:100%;
+}
+.logout{
+    position: absolute;
+    bottom:7%;
+    left: 0;
+    width:100%;
+}
+.user-content{
+    position:relative;
+    width: 100%;
+    padding: 1rem;
+    background-color:antiquewhite;
+}
+.header-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+.dashboard-title{
+    color:darkseagreen;
+    flex-basis:75%;
+}
+
+  body {
+    background: #ccc;
+    font-family: 'Platypi', sans-serif;
+}
+.mytabs {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin: 50px auto;
+    padding: 25px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.mytabs input[type="radio"] {
+    display: none;
+}
+.mytabs label {
+    padding: 25px;
+    background-color: white;
+    font-weight: bold;
+    flex:1;
+    text-align: center;
+    box-sizing: border-box;
+    margin:0;
+    border: none;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.mytabs .tab {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    background-color: darkseagreen;
+    order: 1;
+    display: none;
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+    overflow:hidden;
+}
+.mytabs .tab h2 {
+    font-size: 3em;
+}
+
+.mytabs input[type='radio']:checked + label + .tab {
+    display: block;
+    border-top: none;
+}
+
+.mytabs input[type="radio"]:checked + label {
+    background: darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+}
+.mytabs input[type='radio'] + label {
+    border-bottom: 1px solid #ddd;
+}
+.mytabs .tab img{
+    border-radius: 10px; /* Apply rounded corners to the image */
+    width: 100%; /* Example to ensure the image stretches to the container width */
+    height: auto;
+}

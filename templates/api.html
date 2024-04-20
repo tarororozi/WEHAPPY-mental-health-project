@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mental Health User Info Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    function recordFeeling(feeling) {
+        $.ajax({
+            type: 'POST',
+            url: '/record_feeling',
+            data: JSON.stringify({status: feeling}),
+            contentType: "application/json; charset=utf-8",
+            success: function(response) {
+                alert('Your feeling has been recorded');
+            },
+            error: function(error) {
+                console.log('Error:', error);
+            }
+        });
+    }
+    </script>
+</head>
+<body>
+   <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="user-main">
+            <div class="user-info">
+                <img src="image.webp"/>
+            </div>
+            <li>
+                <a href = "/info" class="active">
+                    <i class="fa-solid fa-id-card"></i>
+                    <span>Info</span>
+                </a>
+            </li>
+            <li>
+                <a href = "/status">
+                    <i class="fa-solid fa-laptop"></i>
+                    <span>Status</span>
+                </a>
+            </li>
+            <li>
+                <a href = "/records">
+                    <i class="fa-solid fa-hospital"></i>
+                    <span>Records</span>
+                </a>
+            </li>
+            <li>
+                <a href = "/settings">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings </span>
+                </a>
+            </li>
+            <li class="support">
+                <a href = "/support">
+                    <i class="fa-solid fa-headset"></i>
+                    <span>Support </span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href = "/logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div class="user-content">
+        <div class="header-wrapper">
+            <div class="dashboard-title">
+                {% if username %}
+                <span>Welcome back, {{ username }}!</span>
+                {% endif %}
+                <h2>How are you feeling today?</h2>
+            </div>
+            <div class="feeling-section">
+                <h3 class="card_title">Today's feeling</h3>
+                <ul class="feelings">
+                    <li onclick="recordFeeling('Excited')">
+                        <i class="fa-regular fa-face-grin-squint"></i>
+                        <span>Excited </span>
+                    </li>
+                    <li onclick="recordFeeling('Normal')">
+                        <i class="fa-regular fa-face-smile-beam"></i>
+                        <span>Normal </span>
+                    </li>
+                    <li onclick="recordFeeling('Stressed')">
+                        <i class="fa-regular fa-face-sad-tear"></i>
+                        <span>Stressed</span>
+                    </li>
+                </ul>            
+            </div>
+        </div>
+        <div class="content-wrapepr">
+            <div class="daily-quote">
+                <p></p>
+            </div>
+            <div class="helpline">
+                <h2>National helpline:</h2>
+                <h3>If you are suicidal or in emotional distress, consider using the 988 Suicide & Crisis Lifeline.</h3>
+                <p>Call or text 988 or chat online  to connect with a trained crisis counselor. The Lifeline provides 24-hour, confidential support to anyone in suicidal crisis or emotional distress. You can reach a specialized LGBTQI+ affirming counselor by texting “Q” to 988 or by calling 988 and pressing “3.”</p>
+                
+                <h2>If you are a veteran, consider using the Veterans Crisis Line.</h2>
+                <p>Call 988, then press “1.” You can also text 838255 or chat online . The Veterans Crisis Line is a 24-hour, confidential resource that connects veterans with a trained responder. The service is available to all veterans and those who support them, even if they are not registered with the VA or enrolled in VA healthcare.</p>
+
+            </div>
+            <div class="mental-resources">
+                <h2>Other mental health resources:</h2>
+                <p>Find mental health resources from  NIH</p>
+                <a href="https://www.nimh.nih.gov/health/find-help">NIH find-help page</a>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mental Health User Inteface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/status_doc_style.css') }}">
+    <link 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="user-main">
+            <div class="user-info">
+                <img src="../static/paimon.png" alt="Paimon"/>
+            </div>
+            <li>
+                <a href = "/info_doc" class="active">
+                    <i class="fa-solid fa-id-card"></i>
+                    <span>Patient List</span>
+                </a>
+            </li>
+            <li>
+                <a href = "/status_doc">
+                    <i class="fa-solid fa-laptop"></i>
+                    <span>Patient Status</span>
+                </a>
+            </li>
+            <li>
+                <a href = "/records_doc">
+                    <i class="fa-solid fa-hospital"></i>
+                    <span>Patient Records</span>
+                </a>
+            </li>
+            <li>
+                <a href = "/settings_doc">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings </span>
+                </a>
+            </li>
+            <li>
+                <a href = "/support_doc">
+                    <i class="fa-solid fa-headset"></i>
+                    <span>Support </span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href = "/logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div class="user-content">
+        <div class="header-wrapper">
+            <div class="dashboard-title">
+                <span>Patient Records</span>
+            </div>
+    </div>
+    <nav>
+        <ul class="train-model">
+        <li>
+            <a href="#">Model Selection ▾</a>
+            <ul class="dropdown">
+                <li><a href="/status_doc">Model 1</a></li>
+                <li><a href="/statusab_doc">Model 2</a></li>
+                <li><a href="/statuslda_doc">Model 3</a></li>
+            </ul>
+        </li>
+        </ul>
+    </nav>
+    <div class="mytabs">
+        <input type="radio" id="tabdefault" name="mytabs" checked="checked">
+        <label for="tabdefault">Greetings!</label>
+        <div class="tab">
+          <p>The default model recommanded is Random Forest(with highest accuracy of prediction)</p>
+          <p>Note: You will be warned if your patient's stress duration exceeds your designated stress threshold</p>
+        </div>
+
+        <input type="radio" id="tabS2" name="mytabs">
+        <label for="tabS2">S2</label>
+        <div class="tab">
+          <img src="../static/rf/S2_plot_RF.png"/>
+        </div>
+    
+        <input type="radio" id="tabS3" name="mytabs">
+        <label for="tabS3">S3</label>
+        <div class="tab">
+            <img src="../static/rf/S3_plot_RF.png"/>
+        </div>
+    
+        <input type="radio" id="tabS4" name="mytabs">
+        <label for="tabS4">S4</label>
+        <div class="tab">
+            <img src="../static/rf/S4_plot_RF.png"/>
+        </div>
+
+        <input type="radio" id="tabS5" name="mytabs">
+        <label for="tabS5">S5</label>
+        <div class="tab">
+            <img src="../static/rf/S5_plot_RF.png"/>
+        </div>
+
+        <input type="radio" id="tabS6" name="mytabs">
+        <label for="tabS6">S6</label>
+        <div class="tab">
+            <img src="../static/rf/S6_plot_RF.png"/>
+        </div>
+
+        <input type="radio" id="tabS7" name="mytabs">
+        <label for="tabS7">S7</label>
+        <div class="tab">
+            <img src="../static/rf/S7_plot_RF.png"/>
+        </div>
+
+        <input type="radio" id="tabS8" name="mytabs">
+        <label for="tabS8">S8</label>
+        <div class="tab">
+            <img src="../static/rf/S8_plot_RF.png"/>
+        </div>
+
+        <input type="radio" id="tabS9" name="mytabs">
+        <label for="tabS9">S9</label>
+        <div class="tab">
+            <img src="../static/rf/S9_plot_RF.png"/>
+        </div>
+
+        <input type="radio" id="tabS10" name="mytabs">
+        <label for="tabS10">S10</label>
+        <div class="tab">
+            <img src="../static/rf/S10_plot_RF.png"/>
+        </div>
+
+        <input type="radio" id="tabS11" name="mytabs">
+        <label for="tabS11">S11</label>
+        <div class="tab">
+            <img src="../static/rf/S11_plot_RF.png"/>
+        </div>
+      </div>
+</body>
+</html>
