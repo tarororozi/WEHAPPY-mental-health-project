@@ -1,6 +1,6 @@
 # WESAD
 ###  A Multimodal Dataset for Wearable Stress and Affect Detection
-##### Group 3: Tongxin Shi, Talia Zhuang, Shijia Ren, Yuqing Liu, Junjie Wu, Yong Lin Kwang
+##### Group 3: Tongxin Shi, Talia Zhuang, Shijia Ren, Yuqing Liu, Junjie Wu
 
 ----------
 
